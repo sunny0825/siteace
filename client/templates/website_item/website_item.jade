@@ -1,0 +1,9 @@
+template(name='website_item')
+  li
+    a(href='{{url}}') {{title}}
+    p {{description}}
+    a.btn.btn-default.js-upvote(href='#')
+      span.glyphicon.glyphicon-arrow-up(aria-hidden='true')
+    a.btn.btn-default.js-downvote(href='#')
+      span.glyphicon.glyphicon-arrow-down(aria-hidden='true')
+    // you will be putting your up and down vote buttons in here!

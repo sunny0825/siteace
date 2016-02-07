@@ -1,0 +1,15 @@
+template(name='website_form')
+  a.btn.btn-default.js-toggle-website-form(href='#')
+    span.glyphicon.glyphicon-plus(aria-hidden='true')
+  #website_form.hidden_div
+    form.js-save-website-form
+      .form-group
+        label(for='url') Site address
+        input#url.form-control(type='text', placeholder='http://www.mysite.com')
+      .form-group
+        label(for='title') Title
+        input#title.form-control(type='text', placeholder='Mysite')
+      .form-group
+        label(for='description') Description
+        input#description.form-control(type='text', placeholder='I found this site really useful for ...')
+      button.btn.btn-default(type='submit') Submit
