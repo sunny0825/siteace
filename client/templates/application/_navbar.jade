@@ -1,5 +1,34 @@
 template(name="navbar")
-  nav.navbar.navbar-default
+  nav.navbar.navbar-default.navbar-fixed-top.navbar-inverse
     .container-fluid
       .navbar-header
-        a.navbar-brand(href='#') Site Ace
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand(href='/') Site Ace
+      .collapse.navbar-collapse
+        ul.nav.navbar-nav.navbar-right
+          if currentUser
+            a.action-add-website.nav-link(href="") Add Website
+            a.profile.nav-link(href="") {{loggedInUser}}
+            a.logout.nav-link(href="") Logout
+          else
+            .dropdown
+              a#dropdownMenu.dropdown-toggle.nav-link(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true' href="") Login
+                span.caret
+              ul.dropdown-menu(aria-labelledby='dropdownMenu')
+                li.custom-login-form
+                  p.show-login Login
+                  form.login-form
+                    input.form-control.account.loginEmail(type='email')
+                    input.form-control.account.loginPassword(type='password')
+                    input.btn.btn-info.btn-block.account(type="submit" value="Sign In")
+                li.custom-signup-form
+                  a.show-signup.nav-link(href="") New User? Sign Up...
+                  form.signup-form
+                    input.form-control.account.registerEmail(type='email')
+                    input.form-control.account.registerPassword(type='password')
+                    input.btn.btn-success.btn-block.account(type="submit" value="Sign Up")
+
+

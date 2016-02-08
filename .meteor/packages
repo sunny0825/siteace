@@ -20,10 +20,17 @@ autopublish             # Publish all data to the clients (for prototyping)
 insecure                # Allow all DB writes from clients (for prototyping)
 twbs:bootstrap
 
-accounts-ui
+accounts-base
+accounts-password
 
 fourseven:scss
+fortawesome:fontawesome
 mquandalle:jade
 u2622:persistent-session
 
 iron:router
+
+juliancwirko:s-alert
+juliancwirko:s-alert-bouncyflip
+juliancwirko:s-alert-stackslide
+juliancwirko:s-alert-flip

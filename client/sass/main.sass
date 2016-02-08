@@ -1,3 +1,52 @@
-/* CSS declarations go here */
-.hidden_div
-	display:none
+$orange: #FFCC66
+$gray: #9D9D9D
+$gray-black: #3c3c3c
+$white: #ffffff
+$blue: #3BB8FD
+$blue-darker: darken($blue, 30)
+$blue-dark: #1C91C0
+
+body
+  padding-top: 5rem
+
+h1,
+h2,
+h3,
+h4,
+div,
+p
+  margin: 0
+
+.action
+  display: inline-block
+  cursor: pointer
+  padding: 0 1.5rem
+  border-radius: 3px
+  .fa
+    font-size: 1.6rem
+    color: white
+    font-weight: bold
+
+.s-alert-info, .s-alert-success, .s-alert-warning, .s-alert-error
+  z-index: 1035
+
+.navbar-collapse
+  line-height: 4rem
+  .navbar-right
+    margin-right: 5px
+    .nav-link
+      font-size: 18px
+      color: $orange
+      margin-right: 1rem
+    .dropdown
+      .dropdown-menu
+        width: 300px
+      .show-signup, .show-login
+        font-size: 2rem
+      .custom-signup-form, .custom-login-form
+        padding: 1rem 2rem
+        .account
+          margin-top: 1rem
+      .signup-form
+        display: none
+

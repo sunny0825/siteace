@@ -1,0 +1,29 @@
+=keyframe($animation_name)
+  @-webkit-keyframes #{$animation_name}
+    @content
+
+  @-moz-keyframes #{$animation_name}
+    @content
+
+  @-o-keyframes #{$animation_name}
+    @content
+
+  @keyframes #{$animation_name}
+    @content
+
+/// Pulse Keyframes
++keyframe(pulsate)
+  0%
+    transform: scale(1, 1)
+  50%
+    transform: scale(1.1, 1.1)
+  100%
+    transform: scale(1, 1)
+
++keyframe(showThenHide)
+  0%
+    +opacity(1)
+  80%
+    +opacity(0.8)
+  100%
+    +opacity(0)
