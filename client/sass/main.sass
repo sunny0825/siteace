@@ -5,9 +5,12 @@ $white: #ffffff
 $blue: #3BB8FD
 $blue-darker: darken($blue, 30)
 $blue-dark: #1C91C0
+$purple: #7b5c9a
+$purple-light: #e4e4f1
+$purple-lighter: #73A5FC
 
 body
-  padding-top: 5rem
+  padding-top: 100px
 
 h1,
 h2,
@@ -16,6 +19,76 @@ h4,
 div,
 p
   margin: 0
+
+/// Placeholder
+::-webkit-input-placeholder
+  color: $gray-black
+  opacity: 0.5
+  -webkit-transition: opacity 0.35s ease-in-out
+  transition: opacity 0.35s ease-in-out
+
+:-moz-placeholder
+  color: $gray-black
+  opacity: 0.5
+  -moz-transition: opacity 0.35s ease-in-out
+  transition: opacity 0.35s ease-in-out
+
+::-moz-placeholder
+  color: $gray-black
+  opacity: 0.5
+  -moz-transition: opacity 0.35s ease-in-out
+  transition: opacity 0.35s ease-in-out
+
+:-ms-input-placeholder
+  color: $gray-black
+  opacity: 0.5
+  -ms-transition: opacity 0.35s ease-in-out
+  transition: opacity 0.35s ease-in-out
+
+
+/// Placeholder CSS for hover
+:hover::-webkit-input-placeholder
+  opacity: 0.75
+  -webkit-transition: opacity 0.35s ease-in-out
+  transition: opacity 0.35s ease-in-out
+
+:hover:-moz-placeholder
+  opacity: 0.75
+  -moz-transition: opacity 0.35s ease-in-out
+  transition: opacity 0.35s ease-in-out
+
+:hover::-moz-placeholder
+  opacity: 0.75
+  -moz-transition: opacity 0.35s ease-in-out
+  transition: opacity 0.35s ease-in-out
+
+:hover:-ms-input-placeholder
+  opacity: 0.75
+  -ms-transition: opacity 0.35s ease-in-out
+  transition: opacity 0.35s ease-in-out
+
+
+/// Placeholder CSS for Focus
+:focus::-webkit-input-placeholder
+  opacity: 0
+  -webkit-transition: opacity 0.35s ease-in-out
+  transition: opacity 0.35s ease-in-out
+
+:focus:-moz-placeholder
+  opacity: 0
+  -moz-transition: opacity 0.35s ease-in-out
+  transition: opacity 0.35s ease-in-out
+
+:focus::-moz-placeholder
+  opacity: 0
+  -moz-transition: opacity 0.35s ease-in-out
+  transition: opacity 0.35s ease-in-out
+
+:focus:-ms-input-placeholder
+  opacity: 0
+  -ms-transition: opacity 0.35s ease-in-out
+  transition: opacity 0.35s ease-in-out
+
 
 .action
   display: inline-block
@@ -28,8 +101,14 @@ p
     font-weight: bold
 
 .s-alert-info, .s-alert-success, .s-alert-warning, .s-alert-error
-  z-index: 1035
+  z-index: 1051
+  font-size: 2rem
 
+.container
+  .thumbnail
+    height: 350px
+
+/// navabar
 .navbar-collapse
   line-height: 4rem
   .navbar-right
@@ -49,4 +128,24 @@ p
           margin-top: 1rem
       .signup-form
         display: none
+
+/// website form modal
+.websit-form-modal
+  .js-save-website-form
+    label
+      font-size: 2rem
+      font-weight: 400
+    .description
+      resize: vertical
+      max-height: 300px
+
+.modal-footer
+  button
+    font-size: 2rem
+  button:hover, button:focus
+    outline: none
+    background-color: $blue-dark
+    border-color: $white
+    color: $white
+
 
