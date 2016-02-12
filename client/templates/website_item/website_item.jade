@@ -1,9 +1,9 @@
 template(name='websiteItem')
   .thumbnail.website-item
-    img(src="")
+    img(src="images/website.png" alt="website")
     .caption
       a(href='{{url}}') {{title}}
-      p {{description}}
+      p.web-desc {{description}}
       a.btn.btn-default.js-upvote(href='#')
         span.glyphicon.glyphicon-arrow-up(aria-hidden='true')
       a.btn.btn-default.js-downvote(href='#')

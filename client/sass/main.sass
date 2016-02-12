@@ -9,6 +9,18 @@ $purple: #7b5c9a
 $purple-light: #e4e4f1
 $purple-lighter: #73A5FC
 
+@keyframes shake
+  10%, 90%
+    transform: translate3d(-1px, 0, 0)
+
+  20%, 80%
+    transform: translate3d(2px, 0, 0)
+  30%, 50%, 70%
+    transform: translate3d(-4px, 0, 0)
+  40%, 60%
+    transform: translate3d(4px, 0, 0)
+
+
 body
   padding-top: 100px
 
@@ -104,9 +116,6 @@ p
   z-index: 1051
   font-size: 2rem
 
-.container
-  .thumbnail
-    height: 350px
 
 /// navabar
 .navbar-collapse
@@ -128,6 +137,23 @@ p
           margin-top: 1rem
       .signup-form
         display: none
+
+/// Website Item
+.website-item
+  :hover
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
+    transform: translate3d(0, 0, 0)
+    backface-visibility: hidden
+    perspective: 1000px
+  height: 380px
+  img
+    height: 75%
+    width: 100%
+  .caption
+    .web-desc
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
 
 /// website form modal
 .websit-form-modal
