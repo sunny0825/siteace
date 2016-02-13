@@ -8,11 +8,15 @@ $blue-dark: #1C91C0
 $purple: #7b5c9a
 $purple-light: #e4e4f1
 $purple-lighter: #73A5FC
+$green-dark: #C1C937
+$green-light: #32CD32
+$green-lighter: #56C856
+$red-light: #D84E1F
+$red: #C94533
 
 @keyframes shake
   10%, 90%
     transform: translate3d(-1px, 0, 0)
-
   20%, 80%
     transform: translate3d(2px, 0, 0)
   30%, 50%, 70%
@@ -140,7 +144,7 @@ p
 
 /// Website Item
 .website-item
-  :hover
+  .website-img:hover, .js-upvote:hover, .js-downvote:hover
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
     transform: translate3d(0, 0, 0)
     backface-visibility: hidden
@@ -154,6 +158,12 @@ p
       overflow: hidden
       white-space: nowrap
       text-overflow: ellipsis
+    .fa, .count
+      font-size: 2rem
+    .fa-thumbs-up
+      color: $green-light
+    .fa-thumbs-down
+      color: $red-light
 
 /// website form modal
 .websit-form-modal
@@ -168,6 +178,7 @@ p
 .modal-footer
   button
     font-size: 2rem
+    transition: all 0.3s ease
   button:hover, button:focus
     outline: none
     background-color: $blue-dark

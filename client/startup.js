@@ -2,7 +2,7 @@ Meteor.startup(function() {
 	sAlert.config({
 		effect: 'flip',
 		position: 'top',
-		timeout: 3000,
+		timeout: 2000,
 		html: false,
 		onRouteClose: true,
 		stack: {
