@@ -21,14 +21,14 @@ template(name="navbar")
                 li.custom-login-form
                   p.show-login Login
                   form.login-form
-                    input.form-control.account.loginEmail(type='email')
-                    input.form-control.account.loginPassword(type='password')
+                    input.form-control.account.loginEmail(type='email' placeholder='EMAIL')
+                    input.form-control.account.loginPassword(type='password' placeholder='PASSWORD')
                     input.btn.btn-info.btn-block.account(type="submit" value="Sign In")
                 li.custom-signup-form
                   a.show-signup.nav-link(href="") New User? Sign Up...
                   form.signup-form
-                    input.form-control.account.registerEmail(type='email')
-                    input.form-control.account.registerPassword(type='password')
+                    input.form-control.account.registerEmail(type='email' placeholder='EMAIL')
+                    input.form-control.account.registerPassword(type='password' placeholder='PASSWORD')
                     input.btn.btn-success.btn-block.account(type="submit" value="Sign Up")
 
 

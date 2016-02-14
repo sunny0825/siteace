@@ -15,7 +15,7 @@ Template.navbar.events({
 		Meteor.loginWithPassword($email.val(), $password.val(), function(err) {
 			if (err) {
 				sAlert.error(err.reason, {
-					effect: "stackslide",
+					effect: "flip",
 					onRouteClose: true
 				})
 			}
@@ -34,7 +34,7 @@ Template.navbar.events({
 				$email.val("");
 				$password.val("");
 				sAlert.error(err.reason, {
-					effect: "stackslide",
+					effect: "flip",
 					onRouteClose: true
 				});
 			}

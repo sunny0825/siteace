@@ -1,2 +1,20 @@
 template(name="websiteItem")
-  h1 hello
+  .container
+    .row
+      .col-md-12
+        .panel.panel-default.website-item
+          .panel-heading
+            a.title(href="{{url}}") {{title}}
+          .panel-body
+            p.desc {{description}}
+          .panel-footer
+            .comment-form
+              input.comment-box.form-control(type='text', placeholder='Anything you wanna say...')
+              button.btn.btn-default.submit-comment(type="button") Add
+            .comment-detail
+              +each comments
+                .comment-info
+                  i.fa.fa-user
+                  span.user {{user this.user}}:
+                  span.text {{text}}
+

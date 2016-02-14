@@ -1,10 +1,6 @@
 template(name='website')
-  .thumbnail.website-item
-    a(href="{{pathFor 'websiteItem' _id}}")
-      img.website-img(src="images/website.png" alt="website")
-    .caption
-      a(href='{{url}}') {{title}}
-      p.web-desc {{description}}
+  .media
+    .media-left
       .vote-section
         a.btn.btn-default.js-upvote(href='#')
           if upvoteChecked
@@ -18,3 +14,9 @@ template(name='website')
           else
             i.fa.fa-thumbs-o-down
           span.count {{downvoteCount}}
+
+    .media-body
+      a.media-heading(href='{{url}}') {{title}}
+      p.web-desc {{description}}
+      a(href="{{pathFor 'websiteItem' _id}}")
+        .check-details.text-center CHECK DETAILS

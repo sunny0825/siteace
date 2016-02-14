@@ -1,4 +1,6 @@
 $orange: #FFCC66
+$gray-lighter: #EEEEEE
+$gray-light: #D3D3D3
 $gray: #9D9D9D
 $gray-black: #3c3c3c
 $white: #ffffff
@@ -36,75 +38,90 @@ div,
 p
   margin: 0
 
+#iron-router-progress
+  background-color: $orange
+
+input.form-control
+  height: 40px
+  font-size: 2rem
+textarea.form-control
+  font-size: 2rem
+
+.btn:focus
+  outline: none
+
 /// Placeholder
-::-webkit-input-placeholder
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder
   color: $gray-black
+  font-size: 2rem
   opacity: 0.5
   -webkit-transition: opacity 0.35s ease-in-out
   transition: opacity 0.35s ease-in-out
 
-:-moz-placeholder
+input:-moz-placeholder, textarea:-moz-placeholder
   color: $gray-black
+  font-size: 2rem
   opacity: 0.5
   -moz-transition: opacity 0.35s ease-in-out
   transition: opacity 0.35s ease-in-out
 
-::-moz-placeholder
+input::-moz-placeholder, textarea::-moz-placeholder
   color: $gray-black
+  font-size: 2rem
   opacity: 0.5
   -moz-transition: opacity 0.35s ease-in-out
   transition: opacity 0.35s ease-in-out
 
-:-ms-input-placeholder
+input:-ms-input-placeholder, textarea:-ms-input-placeholder
   color: $gray-black
+  font-size: 2rem
   opacity: 0.5
   -ms-transition: opacity 0.35s ease-in-out
   transition: opacity 0.35s ease-in-out
 
 
 /// Placeholder CSS for hover
-:hover::-webkit-input-placeholder
-  opacity: 0.75
+input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder
+  opacity: 0.8
   -webkit-transition: opacity 0.35s ease-in-out
   transition: opacity 0.35s ease-in-out
 
-:hover:-moz-placeholder
-  opacity: 0.75
+input:hover:-moz-placeholder, textarea:hover:-moz-placeholder
+  opacity: 0.8
   -moz-transition: opacity 0.35s ease-in-out
   transition: opacity 0.35s ease-in-out
 
-:hover::-moz-placeholder
-  opacity: 0.75
+input:hover::-moz-placeholder, textarea:hover::-moz-placeholder
+  opacity: 0.8
   -moz-transition: opacity 0.35s ease-in-out
   transition: opacity 0.35s ease-in-out
 
-:hover:-ms-input-placeholder
-  opacity: 0.75
+input:hover:-ms-input-placeholder, textarea:hover:-ms-input-placeholder
+  opacity: 0.8
   -ms-transition: opacity 0.35s ease-in-out
   transition: opacity 0.35s ease-in-out
 
 
 /// Placeholder CSS for Focus
-:focus::-webkit-input-placeholder
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder
   opacity: 0
   -webkit-transition: opacity 0.35s ease-in-out
   transition: opacity 0.35s ease-in-out
 
-:focus:-moz-placeholder
+input:focus:-moz-placeholder, textarea:focus:-moz-placeholder
   opacity: 0
   -moz-transition: opacity 0.35s ease-in-out
   transition: opacity 0.35s ease-in-out
 
-:focus::-moz-placeholder
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder
   opacity: 0
   -moz-transition: opacity 0.35s ease-in-out
   transition: opacity 0.35s ease-in-out
 
-:focus:-ms-input-placeholder
+input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder
   opacity: 0
   -ms-transition: opacity 0.35s ease-in-out
   transition: opacity 0.35s ease-in-out
-
 
 .action
   display: inline-block
@@ -142,28 +159,82 @@ p
       .signup-form
         display: none
 
-/// Website Item
-.website-item
-  .website-img:hover, .js-upvote:hover, .js-downvote:hover
+/// Website
+.media
+  margin-bottom: 2rem
+  .media-left
+    padding-right: 30px
+    padding-top: 8px
+  .website-img:hover, .js-upvote:hover, .js-downvote:hover, .check-details:hover
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
     transform: translate3d(0, 0, 0)
     backface-visibility: hidden
     perspective: 1000px
-  height: 380px
-  img
-    height: 75%
-    width: 100%
-  .caption
-    .web-desc
-      overflow: hidden
-      white-space: nowrap
-      text-overflow: ellipsis
-    .fa, .count
-      font-size: 2rem
-    .fa-thumbs-up
-      color: $green-light
-    .fa-thumbs-down
-      color: $red-light
+  .media-heading
+    font-size: 2.2rem
+    font-weight: bold
+  .js-upvote, .js-downvote
+    width: 80px
+  .fa, .count
+    font-size: 2rem
+  .fa-thumbs-up
+    color: $green-light
+  .fa-thumbs-down
+    color: $red-light
+  .web-desc
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+    font-size: 1.8rem
+    margin-bottom: 5px
+  .check-details
+    display: inline-block
+    width: 120px
+    padding: 3px
+    background-color: $orange
+    border-radius: 5px
+    color: $gray-black
+
+/// Website Item
+.website-item
+  .panel-body
+    padding: 30px
+  .title
+    font-size: 3rem
+  .desc
+    font-size: 2rem
+  .panel-footer
+    padding: 20px
+    .comment-form
+      position: relative
+      margin-bottom: 30px
+      .comment-box
+        width: 100%
+        height: 50px
+      .submit-comment
+        &:hover
+          background-color: $gray
+        background-color: $orange
+        border: 1px solid rgba(0,0,0,0)
+        border-top-left-radius: 0
+        border-bottom-left-radius: 0
+        transition: all 0.3s ease
+        color: $white
+        font-size: 2rem
+        height: 50px
+        position: absolute
+        right: 0
+        top: 0
+    .comment-detail
+      .comment-info
+        padding: 5px 0
+        .fa-user, .user
+          font-size: 1.5rem
+        .text
+          font-size: 1.8rem
+
+
+
 
 /// website form modal
 .websit-form-modal
