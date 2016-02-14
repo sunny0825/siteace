@@ -1,22 +1,23 @@
 template(name='website')
-  .media
-    .media-left
+  .row.website
+    .col-xs-6.col-md-8
+      a.title(href='{{url}}') {{title}}
+      p.desc {{description}}
       .vote-section
-        a.btn.btn-default.js-upvote(href='#')
+        .btn.btn-default.js-upvote
           if upvoteChecked
             i.fa.fa-thumbs-up
           else
             i.fa.fa-thumbs-o-up
           span.count {{upvoteCount}}
-        a.btn.btn-default.js-downvote(href='#')
+        .btn.btn-default.js-downvote
           if downvoteChecked
             i.fa.fa-thumbs-down
           else
             i.fa.fa-thumbs-o-down
           span.count {{downvoteCount}}
-
-    .media-body
-      a.media-heading(href='{{url}}') {{title}}
-      p.web-desc {{description}}
+    .col-xs-6.col-md-4
       a(href="{{pathFor 'websiteItem' _id}}")
         .check-details.text-center CHECK DETAILS
+      .add-time Added on {{createdTime}}
+  hr

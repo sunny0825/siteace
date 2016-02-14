@@ -10,6 +10,9 @@ Template.website.helpers({
 	},
 	downvoteCount: function() {
 		return Websites.getDownvote(this._id);
+	},
+	createdTime: function() {
+		return moment(this.createdAt).format('L')
 	}
 });
 

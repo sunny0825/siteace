@@ -26,7 +26,6 @@ $red: #C94533
   40%, 60%
     transform: translate3d(4px, 0, 0)
 
-
 body
   padding-top: 100px
 
@@ -160,40 +159,47 @@ input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder
         display: none
 
 /// Website
-.media
-  margin-bottom: 2rem
-  .media-left
-    padding-right: 30px
-    padding-top: 8px
-  .website-img:hover, .js-upvote:hover, .js-downvote:hover, .check-details:hover
-    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
-    transform: translate3d(0, 0, 0)
-    backface-visibility: hidden
-    perspective: 1000px
-  .media-heading
+.website
+  .title
     font-size: 2.2rem
     font-weight: bold
-  .js-upvote, .js-downvote
-    width: 80px
-  .fa, .count
-    font-size: 2rem
-  .fa-thumbs-up
-    color: $green-light
-  .fa-thumbs-down
-    color: $red-light
-  .web-desc
+  .desc
     overflow: hidden
     white-space: nowrap
     text-overflow: ellipsis
     font-size: 1.8rem
-    margin-bottom: 5px
+  .vote-section
+    display: inline-block
+    .js-upvote, .js-downvote
+      &:hover
+        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
+        transform: translate3d(0, 0, 0)
+        backface-visibility: hidden
+        perspective: 1000px
+        border-color: $white
+      width: 50px
+      padding: 3px
+      border-radius: 50%
+      background-color: $gray-lighter
+      border-color: $gray-lighter
+      transition: all 0.3s ease
+    .fa, .count
+      font-size: 1.8rem
+    .fa-thumbs-up
+      color: $green-light
+    .fa-thumbs-down
+      color: $red-light
   .check-details
     display: inline-block
-    width: 120px
-    padding: 3px
+    width: 140px
+    padding: 5px
     background-color: $orange
     border-radius: 5px
     color: $gray-black
+    margin-bottom: 5px
+  .add-time
+    padding: 5px 0
+    font-size: 1.5rem
 
 /// Website Item
 .website-item
@@ -234,8 +240,6 @@ input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder
           font-size: 1.8rem
 
 
-
-
 /// website form modal
 .websit-form-modal
   .js-save-website-form
@@ -245,15 +249,14 @@ input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder
     .description
       resize: vertical
       max-height: 300px
-
-.modal-footer
-  button
-    font-size: 2rem
-    transition: all 0.3s ease
-  button:hover, button:focus
-    outline: none
-    background-color: $blue-dark
-    border-color: $white
-    color: $white
+  .modal-footer
+    button
+      font-size: 2rem
+      transition: all 0.3s ease
+    button:hover, button:focus
+      outline: none
+      background-color: $blue-dark
+      border-color: $white
+      color: $white
 
 
