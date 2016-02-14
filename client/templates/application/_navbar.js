@@ -48,7 +48,14 @@ Template.navbar.events({
 	},
 
 	'click .action-add-website': function(event) {
-		$('.websit-form-modal').modal('toggle');
+		if (Users.isLoggedIn()) {
+			$('.websit-form-modal').modal('toggle');
+		} else {
+			sAlert.error("Please login first to add new website.", {
+				effect: "flip",
+				onRouteClose: true
+			})
+		}
 	}
 })
 

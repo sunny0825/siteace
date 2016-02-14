@@ -1,16 +1,13 @@
 template(name="navbar")
-  nav.navbar.navbar-default.navbar-fixed-top.navbar-inverse
+  .nav.navbar.navbar-default.navbar-fixed-top.navbar-inverse
     .container-fluid
       .navbar-header
-        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
-        a.navbar-brand(href='/') Site Share
+        a.navbar-brand(href="{{pathFor 'home'}}") Site Share
       .collapse.navbar-collapse
+        .navbar-left.action-add-website(role="search")
+          i.fa.fa-plus
         ul.nav.navbar-nav.navbar-right
           if currentUser
-            a.action-add-website.nav-link(href="") Add Website
             a.profile.nav-link(href="") {{loggedInUser}}
             a.logout.nav-link(href="") Logout
           else
@@ -30,5 +27,7 @@ template(name="navbar")
                     input.form-control.account.registerEmail(type='email' placeholder='EMAIL')
                     input.form-control.account.registerPassword(type='password' placeholder='PASSWORD')
                     input.btn.btn-success.btn-block.account(type="submit" value="Sign Up")
+        .search-form.navbar-right
+          input.form-control.search-input(type="search" placeholder="Search...")
 
 
