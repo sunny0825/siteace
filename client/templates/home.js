@@ -1,4 +1,4 @@
-Template.navbar.events({
+Template.home.events({
 	'click .dropdown-menu': function(event) {
 		event.stopPropagation();
 	},
@@ -59,8 +59,13 @@ Template.navbar.events({
 	}
 })
 
-Template.navbar.helpers({
+Template.home.helpers({
 	loggedInUser: function() {
 		return Meteor.user()["emails"][0]["address"]
+	},
+	websiteIndex: WebsitesIndex,
+	inputAttribute: {
+		class: 'form-contorl',
+		placeholder: 'Search...'
 	}
 })
