@@ -19,6 +19,8 @@ Template.navbar.events({
 					onRouteClose: true
 				})
 			}
+			$email.val("");
+			$password.val("");
 		});
 	},
 
@@ -31,13 +33,13 @@ Template.navbar.events({
 			password: $password.val()
 		}, function(err) {
 			if (err) {
-				$email.val("");
-				$password.val("");
 				sAlert.error(err.reason, {
 					effect: "flip",
 					onRouteClose: true
 				});
 			}
+			$email.val("");
+			$password.val("");
 		});
 		return false;
 	},
