@@ -1,4 +1,13 @@
 Template.websiteForm.events({
+	"blur .js-save-website-form .url": function(event) {
+		var url = $('.js-save-website-form .url').val();
+		if (url !== "" && url.startsWith('http')) {
+			extractMeta($('.js-save-website-form .url').val(), function(err, res) {
+				$('.js-save-website-form .title').val(res.title);
+				$('.js-save-website-form .description').val(res.description);
+			})
+		}
+	},
 	"click .submit-website-form": function(event) {
 		var $url = $('.js-save-website-form .url');
 		var $title = $('.js-save-website-form .title');
